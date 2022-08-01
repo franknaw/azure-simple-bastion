@@ -1,12 +1,8 @@
 
 data "template_file" "linux_script" {
-  template = file("${path.module}/scripts/install_runner.sh")
+  template = file("${path.module}/scripts/startup.sh")
   vars = {
-    github_org    = var.github_org_name
-    runner_token  = var.github_runner_token
-    runner_name   = var.github_runner_name
-    runner_group  = "default"
-    runner_labels = lower(join(",", var.runner_labels))
+    some_var    = "some value"
   }
 }
 

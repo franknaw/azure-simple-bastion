@@ -63,20 +63,3 @@ variable "runner_labels" {
   description = "list of labels to associate to the runner"
   type        = list(string)
 }
-
-variable "ubuntu_source_image_reference" {
-  description = "The linux Ubuntu publisher image to use."
-  type = object({
-    publisher = string
-    offer     = string
-    sku       = string
-    version   = string
-  })
-
-  default = {
-    publisher = "Canonical"
-    offer     = "0001-com-ubuntu-server-focal"
-    sku       = "20_04-lts-gen2"
-    version   = "latest"
-  }
-}
