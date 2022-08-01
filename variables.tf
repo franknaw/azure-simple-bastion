@@ -42,24 +42,3 @@ variable "destination_address_prefix" {
   description = "Tags to be applied to resources"
   type        = string
 }
-
-variable "github_runner_token" {
-  description = "The GitHub runner token."
-  type        = string
-  sensitive   = true
-}
-
-variable "github_org_name" {
-  description = "The GitHub organization."
-  type        = string
-}
-
-variable "github_runner_name" {
-  description = "The GitHub runner name."
-  type        = string
-}
-
-variable "runner_labels" {
-  description = "list of labels to associate to the runner"
-  type        = list(string)
-}
